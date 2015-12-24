@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fG2-Yw-pTe">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScanVC-->
+        <scene sceneID="TGk-Dd-JTa">
+            <objects>
+                <viewController id="fG2-Yw-pTe" customClass="ScanVC" customModule="CoreBluetoothDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KoH-fC-acA"/>
+                        <viewControllerLayoutGuide type="bottom" id="RyG-QJ-qLp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLo-gN-6LC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguardando monitor cardíaco..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g14-TG-ifC">
+                                <rect key="frame" x="12" y="273.5" width="296" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g14-TG-ifC" firstAttribute="centerX" secondItem="GLo-gN-6LC" secondAttribute="centerX" id="GCW-XY-XoV"/>
+                            <constraint firstItem="g14-TG-ifC" firstAttribute="leading" secondItem="GLo-gN-6LC" secondAttribute="leadingMargin" constant="-4" id="JzR-sb-hgt"/>
+                            <constraint firstItem="g14-TG-ifC" firstAttribute="centerY" secondItem="GLo-gN-6LC" secondAttribute="centerY" id="Mvv-M2-wVr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eQI-LV-qHG"/>
+                    <connections>
+                        <segue destination="DNT-ae-VxW" kind="modal" identifier="HeartMonitorVC" id="wB3-xG-7H1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD5-ah-ttu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-442"/>
+        </scene>
+        <!--Heart MonitorVC-->
+        <scene sceneID="HDw-Q1-Jt0">
+            <objects>
+                <viewController id="DNT-ae-VxW" customClass="HeartMonitorVC" customModule="CoreBluetoothDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BZY-MW-RBA"/>
+                        <viewControllerLayoutGuide type="bottom" id="nuX-TC-HEo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jIa-fi-Eia">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lxZ-KB-4Va">
+                                <rect key="frame" x="63" y="187" width="194" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sua frequência cardíaca:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFP-Te-5zM">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAu-EO-DVO">
+                                        <rect key="frame" x="0.0" y="21" width="194" height="153"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="128"/>
+                                        <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDX-3U-ArI">
+                                        <rect key="frame" x="0.0" y="174" width="194" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lxZ-KB-4Va" firstAttribute="leading" secondItem="jIa-fi-Eia" secondAttribute="leadingMargin" constant="47" id="0xu-c3-7HL"/>
+                            <constraint firstItem="lxZ-KB-4Va" firstAttribute="centerX" secondItem="jIa-fi-Eia" secondAttribute="centerX" id="r25-8C-BDI"/>
+                            <constraint firstItem="lxZ-KB-4Va" firstAttribute="centerY" secondItem="jIa-fi-Eia" secondAttribute="centerY" id="sSx-wA-CzV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hrmLabel" destination="GAu-EO-DVO" id="whg-y6-1BI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNe-W3-ibU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="-442"/>
+        </scene>
+    </scenes>
+</document>
